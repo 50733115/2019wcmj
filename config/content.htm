@@ -329,18 +329,19 @@ All rights reserved | This template is made with <i aria-hidden="true" class="ic
 <script src="/static/chimper/js/main.js"></script>
 </p>
 <h1>第四個ROC國旗</h1>
+<!-- 導入 Brython 標準程式庫 -->
 <script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
-<p><img alt="" height="400" src="/images/下載.png" width="600"/></p>
+<p></p>
 <!-- 啟動 Brython -->
-<script>// <![CDATA[
+<script>
 window.onload=function(){
 // 設定 data/py 為共用程式路徑
 brython({debug:1, pythonpath:['./../data/py']});
 }
-// ]]></script>
+</script>
 <p><canvas height="400" id="plotarea" width="600"></canvas></p>
-<script type="text/python">// <![CDATA[
+<script type="text/python">
 # 導入 doc
 from browser import document as doc
 import math
@@ -392,15 +393,69 @@ ctx.closePath()
 # 填色設為白色
 ctx.fillStyle = '#fff'
 ctx.fill()
-// ]]></script>
-<p><br/>繪圖 &lt;&lt; <a href="/get_page/%E7%AC%AC%E5%9B%9B%E5%80%8BROC%E5%9C%8B%E6%97%97/繪圖.html">Previous</a> <a href="/get_page/%E7%AC%AC%E5%9B%9B%E5%80%8BROC%E5%9C%8B%E6%97%97/Spur Gears.html">Next</a> &gt;&gt; Spur Gears</p>
+</script>
+<p><canvas height="400" id="plotarea2" width="600"></canvas></p>
+<script type="text/python">
+# 導入 doc
+from browser import document as doc
+import math
+
+# 準備繪圖畫布
+canvas = doc["plotarea2"]
+ctx = canvas.getContext("2d")
+# 進行座標轉換, x 軸不變, y 軸反向且移動 canvas.height 單位光點
+# ctx.setTransform(1, 0, 0, -1, 0, canvas.height)
+# 以下採用 canvas 原始座標繪圖
+flag_w = canvas.width
+flag_h = canvas.height
+circle_x = flag_w/4
+circle_y = flag_h/4
+# 先畫滿地紅
+ctx.fillStyle='rgb(255, 127, 80)'
+ctx.fillRect(0,0,flag_w,flag_h)
+# 再畫青天
+ctx.fillStyle='rgb(0, 0, 150)'
+ctx.fillRect(0,0,flag_w/2,flag_h/2)
+# 畫十二道光芒白日
+ctx.beginPath()
+star_radius = flag_w/8
+angle = 0
+for i in range(24):
+    angle += 5*math.pi*2/12
+    toX = circle_x + math.cos(angle)*star_radius
+    toY = circle_y + math.sin(angle)*star_radius
+    # 只有 i 為 0 時移動到 toX, toY, 其餘都進行 lineTo
+    if (i):
+        ctx.lineTo(toX, toY)
+    else:
+        ctx.moveTo(toX, toY)
+ctx.closePath()
+# 將填色設為白色
+ctx.fillStyle = '#fff'
+ctx.fill()
+# 白日:藍圈
+ctx.beginPath()
+ctx.arc(circle_x, circle_y, flag_w*17/240, 0, math.pi*2, True)
+ctx.closePath()
+# 填色設為藍色
+ctx.fillStyle = 'rgb(0, 0, 149)'
+ctx.fill()
+# 白日:白心
+ctx.beginPath()
+ctx.arc(circle_x, circle_y, flag_w/16, 0, math.pi*2, True)
+ctx.closePath()
+# 填色設為白色
+ctx.fillStyle = '#fff'
+ctx.fill()
+</script>
+<p><br/>W14 &lt;&lt; <a href="/get_page/%E7%AC%AC%E5%9B%9B%E5%80%8BROC%E5%9C%8B%E6%97%97/W14.html">Previous</a></p>
 <!-- footer -->
 <div class="container">
 <div class="row pt-3 mx-auto">
 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> Copyright ©
-<script>// <![CDATA[
+<script>
 document.write(new Date().getFullYear());
-// ]]></script>
+</script>
 All rights reserved | This template is made with <i aria-hidden="true" class="icon-heart"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 </div>
 </div>
@@ -408,7 +463,7 @@ All rights reserved | This template is made with <i aria-hidden="true" class="ic
 <p></p>
 <!-- for site wrap -->
 <p></p>
-<!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+<!-- <script src="../static/chimper/js/jquery-3.3.1.min.js"></script> -->
 <script src="/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
 <script src="/static/chimper/js/jquery-ui.js"></script>
 <script src="/static/chimper/js/popper.min.js"></script>
@@ -419,10 +474,10 @@ All rights reserved | This template is made with <i aria-hidden="true" class="ic
 <script src="/static/chimper/js/jquery.magnific-popup.min.js"></script>
 <script src="/static/chimper/js/bootstrap-datepicker.min.js"></script>
 <script src="/static/chimper/js/aos.js"></script>
-<p>&lt;!--</p>
-<script src="/static/chimper/js/typed.js"></script>
-<script>// <![CDATA[
-var typed = new Typed('.typed-words', {
+<!--
+            <script src="/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
                     strings: ["Web Apps"," WordPress"," Mobile Apps"],
                     typeSpeed: 80,
                     backSpeed: 80,
@@ -431,7 +486,9 @@ var typed = new Typed('.typed-words', {
                     loop: true,
                     showCursor: true
                     });
-// ]]></script><h1>期中報告影片</h1>
+                    </script>
+            -->
+<script src="/static/chimper/js/main.js"></script><h1>期中報告影片</h1>
 <p>介紹第一到八周網際內容管理所做的成果影片</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/FoWnv9dvsnQ" width="560"></iframe></p>
 <p>第1-8周主要教學網站:網際內容管理網誌、2019 Spring網際內容管理</p>
@@ -441,5 +498,5 @@ var typed = new Typed('.typed-words', {
 <p>3.建立github倉儲，並理解改版時指令的用意(git add .、git commit -m ""、git push)</p>
 <p>4.利用CMSimfly內容，建立自己的Github Pages網站</p>
 <p>5.學習如何使用CMSimfly，在網站中加入內容，並進行改版</p>
-<p>示範如何開啟網站<br/>開啟已下載完成的cd2019_cdb_w5資料夾並啟動<br/>輸入cd tmp<br/>cd 2019wcmj<br/>python wsgi.py<br/>複製網址並開啟即可進入自己的CMSimfly管理網頁<br/>登入密碼:admin即可登入並且進行編輯<br/>&lt;產生亂數1-51&gt;就是示範在網頁裡新增內容 透過輸入程式碼及文字可以新增內容<br/>新增完內容後可點擊右上角選項generate_pages轉為靜態網頁</p>
+<p>示範如何開啟網站<br/>開啟已下載完成的cd2019_cdb_w5資料夾並啟動<br/>輸入cd tmp<br/>cd 2019wcmj<br/>python wsgi.py<br>複製網址並開啟即可進入自己的CMSimfly管理網頁<br/>登入密碼:admin即可登入並且進行編輯<br/>&lt;產生亂數1-51&gt;就是示範在網頁裡新增內容 透過輸入程式碼及文字可以新增內容<br/>新增完內容後可點擊右上角選項generate_pages轉為靜態網頁</br></p>
 <p>並且牢記每次經過新增內容後必須利用指令進行改版(git add .、git commit -m ""、git push)<br/>透過登入github可以看到自己的網頁過去改版新增的內容</p>
