@@ -20,13 +20,7 @@
 <p><span><span>可以利用"命令提示字元"輸入<b>ipconfig"</b>它的主要功用，包括用來顯示現時網路連線的設定（/all參數），或透過/release參數來釋放取得的ip位置，和透過/renew 來重新獲取ip位置的分配。</span></span></p>
 <p><span><span><img alt="" height="216" src="/images/chrome_btm9ZrdFdm.png" width="400"/></span></span></p>
 <p><br/><br/><img alt="" height="321" src="/images/explorer_UITFw7HX7h.png" width="600"/></p>
-<h2>IP位址</h2>
-<p><span>（IP Address）每一台電腦都必需要有唯一的IP位址（例如：74.125.153.104為google台灣的網址）才能上網。如果使用錯誤的IP位址，則可能會導致無法連線，也可能造成別的電腦無法連線。所以，IP位址一定要經過申請的程序取得合法且唯一的位址。</span></p>
-<p><span><img alt="" height="218" src="/images/cmd_0RUZxKd4B8.png" width="436"/></span></p>
-<h2>DNS伺服器</h2>
-<p><span>（DNS Server）：所謂的DNS (Domain Name System網域名稱系統)簡單的說就是把網域名稱翻譯成IP位址(也可以逆向操作)，例如：將<a href="http://www.google.com.tw/" target="_blank">www.google.com.tw</a><span><span> </span>的網址翻譯成IP為74.125.153.104，因為網域名稱是用英文組成，會讓人容易記憶，但是IP位址一串毫無意義的數字，非常不容易記憶。</span></span></p>
-<p><span><span><img alt="" height="518" src="/images/dllhost_WX2S1uVwDX.png" width="465"/></span></span></p>
-<h2>chrome proxy</h2>
+<p><span><span></span></span></p><h2>chrome proxy</h2>
 <p><span>正常情況下, 電腦輔助設計室中的 64 台電腦透過 IPv4 協定下的 DHCP 與 NAT 上網, 各電腦以 DHCP client 取得 192.168.1.* 的網路位址, 然後以 NAT 的一組外部 IP 上網, 通常必須設定 Proxy Server 為 http://proxy.kmol.info:3128 後上網會比較順暢, 但若 8 台 Proxy Servers 無法正常運作時, 則取消 Proxy Server 的設定</span></p>
 <p><img alt="" height="519" src="/images/rundll32_w9vJQp0NqB.png" width="800"/></p>
 <p>proxy位置:140.130.17.3 連接阜:3128</p>
@@ -35,14 +29,18 @@
 <p><span><strong>cls</strong> -清除目前的命令列顯示的內容</span></p>
 <p><span><span></span></span></p>
 <h1>倉儲改版</h1>
-<p><br/>建立 Git 倉儲, 並 clone 倉儲至近端工作後, 對遠端倉儲改版<br/><br/>可攜程式系統中已經內建 git, 可以在啟動 start.bat 後, 透過 path 的設定, 直接執行 git 指令.<br/><br/>建立 Git 倉儲, 共分為兩類, 一類是直接在 Github 網際介面下建立倉儲時, 要求建立 README.md 檔案, 之後可以直接在近端, 以 git clone 加上倉儲連線 URL, 將倉儲克隆一份到近端, 並以最新版本作為工作目錄, 使用者改版後, 可以直接透過 git add, commit 與 push 對遠端倉儲改版.<br/>另一類則是故意在 Github 網際介面下建立倉儲時, 不要建立任何檔案, 而是在近端自行利用 git 指令建立倉儲架構, 新增內容後, 以 git remote add 設法在近端倉儲中納入 origin URL 後, 將近端倉儲版本新增提交推送到遠端.</p>
-<p>首先先輸入cd 2019wcmj 隨後再打python wsgi.py  複製https://127.0.0.1:9443/<img alt="" height="220" src="/images/cmd_8KBRwvRBy9.png" width="421"/></p>
-<p>進到網頁登錄密碼:admin後便可以開始進行改版</p>
+<p><span></span></p>
+<p><span style="color: #000000; background-color: #ff0000;">指令解釋</span></p>
+<p><strong><span style="color: #ff0000;">git add</span> :把已修改的檔案增加暫存區, 可以加單一檔案也可以使用 . 增加所有檔案.</strong></p>
+<p><strong><span style="color: #ff0000;">git commit -m</span> "提交訊息"  用來將暫存區的檔案加到.git目錄下.</strong></p>
+<p><strong><span style="color: #ff0000;">git push</span> :將提交的內容推到遠端倉儲加上 -f 會強制push覆蓋掉遠端資料 </strong></p>
+<p><strong><span style="color: #ff0000;">git pull</span> :將遠端較新的資料拉回近端合併, 當push的時候有提示遠端的版本更新時, 請先拉後推, 不要直接使用-f.</strong></p>
+<p><span style="background-color: #ffff99;">首先先輸入cd 2019wcmj 隨後再打python wsgi.py  複製https://127.0.0.1:9443/</span><img alt="" height="220" src="/images/cmd_8KBRwvRBy9.png" width="421"/></p>
+<p><span style="background-color: #ffff99;">進到網頁登錄密碼:admin後便可以開始進行改版</span></p>
 <p><img alt="" height="261" src="/images/chrome_loiyqNFP8r.png" width="415"/></p>
-<p>改版完成後再透過git  add . git commit -m"" git push</p>
+<p><span style="background-color: #ffff99;">改版完成後再透過git  add . git commit -m"" git push</span></p>
 <p></p>
-<p><br/>指令解釋<br/><br/><strong><span style="background-color: #ff0000;">git add</span></strong><br/> 可以用來新增一個檔案, 數個檔案, 或在之前提交後所新增的所有內容.<br/>git add 在 GIT 架構下, 是對所新增或修改的內容拍快照:<br/><br/><br/><strong><span style="background-color: #ff0000;">git commit </span></strong><br/> 執行之前, 必須使用 git config 建立臨時或永久的身分註記, 因為 GIT 在展開所有改版內容時, 必須明確登錄這些變更的作者與時間.<br/>當使用者採用 git commit -m "改版說明訊息", 此次提交到 .git 目錄下的更動內容, 均會綁定使用者身分與改版所輸入的說明訊息.<br/><br/><strong><span style="background-color: #ff0000;">git push</span></strong><br/> 在隨後沒有輸入遠端 URL 代號時, 表示要推送到 origin, 若透過 git remote add 設定其他代號與 URL 對應時, git push 加上代號, 就可以將此次的提交內容, 推送到指定的 URL 所在遠端倉儲.  </p>
-<p>利用 CMSimfly (https://github.com/chiamingyen/cmsimfly) 內容, 建立自己的 Github Pages 網站</p><h2>上傳youtube影片</h2>
+<p></p><h2>倉儲改版</h2><h2>上傳youtube影片</h2>
 <p>豪哥二度上場,不料第一球跨步上籃馬上被打了一個大火鍋</p>
 <p></p>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/N-ojN0TGwkg" width="560"></iframe></p>
@@ -675,8 +673,23 @@ ctx.fill()
 <div class="line number63 index62 alt2"><code class="html color2">ctx.fillStyle = '#fff'</code></div>
 <div class="line number64 index63 alt1"><code class="html color2">ctx.fill()</code></div>
 <div class="line number65 index64 alt2"><code class="html color2">// ]]&gt;</code><code class="html plain">&lt;/</code><code class="html keyword">script</code><code class="html plain">&gt;</code></div>
-<h1>第五個3D</h1>
-<p><iframe height="900" src="/get_page/%E7%AC%AC%E4%BA%94%E5%80%8B3D/static/viewstl.html" width="1200"><iframe></iframe></iframe></p><h1>示範影片</h1>
+<h1>第五個3D物件</h1>
+<p><br/><br/><br/><br/><br/></p>
+<p><iframe height="900" src="/static/viewstl.html?src=/downloads/3d.stl.stl" width="900"><iframe></iframe></iframe></p>
+<h2>3D成品</h2>
+<p></p>
+<p></p>
+<p><iframe height="900" src="/static/viewstl.html?src=/downloads/3d.stl.stl" width="900"><iframe></iframe></iframe></p><h2>作法</h2>
+<p>1.先做出自己想要的物件</p>
+<p><img alt="" height="271" src="/images/solvespace_6Co6THkmdX.png" width="443"/></p>
+<p>2.存檔後轉檔成Ascii Stereolithography(.stl)</p>
+<p><img alt="" height="341" src="/images/chrome_vbgJ1SIg8X.png" width="444"/></p>
+<p>3.上傳至自己的動態網頁(File upload)然後於(File list) 開啟檔案便複製後段網址</p>
+<p><img alt="" height="124" src="/images/chrome_BumsSCv72n.png" width="316"/></p>
+<p><img alt="" height="53" src="/images/chrome_F17RuDB9n9.png" width="530"/></p>
+<p>4.打入&lt;p&gt;&lt;iframe width="900" height="900" src="/static/viewstl.html?src=/downloads/3d.stl.stl"&gt;&lt;iframe&gt;&lt;/iframe&gt;&lt;/iframe&gt;&lt;/p&gt;</p>
+<p>存檔後即完成</p>
+<p><img alt="" height="163" src="/images/chrome_TUnZIJeQ83.png" width="466"/></p><h1>示範影片</h1>
 <h2>如何建立倉儲</h2>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/lPJGzHdpIOw" width="560"></iframe></p>
 <h2>啟用 Github Pages 與 CMSimfly</h2>
