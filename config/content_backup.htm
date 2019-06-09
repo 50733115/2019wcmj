@@ -22,8 +22,12 @@
 <p><br/><br/><img alt="" height="321" src="/images/explorer_UITFw7HX7h.png" width="600"/></p>
 <p><span><span></span></span></p><h2>chrome proxy</h2>
 <p><span>正常情況下, 電腦輔助設計室中的 64 台電腦透過 IPv4 協定下的 DHCP 與 NAT 上網, 各電腦以 DHCP client 取得 192.168.1.* 的網路位址, 然後以 NAT 的一組外部 IP 上網, 通常必須設定 Proxy Server 為 http://proxy.kmol.info:3128 後上網會比較順暢, 但若 8 台 Proxy Servers 無法正常運作時, 則取消 Proxy Server 的設定</span></p>
-<p></p>
-<p>Proxy位址改學校IP:140.130.17.3 學校連接<span>埠:3128</span></p>
+<p><span>到任意網站，右上角管理&gt;設定</span></p>
+<p><img alt="" height="602" src="/images/UVYIR97WGj.png" width="416"/></p>
+<p><span>進階&gt;開啟Proxy設定連線&gt;LAN設定</span></p>
+<p><img alt="" height="130" src="/images/chrome_idjdPRpoh2.png" width="500"/></p>
+<p><img alt="" height="219" src="/images/chrome_KJiucKmmc0.png" width="503"/></p>
+<p><strong>chrome proxy(輸入伺服器位址及連接埠-進入進階設定將特定網址取消使用proxy)</strong>Proxy位址改學校IP:140.130.17.3 學校連接埠:3128</p>
 <p><img alt="" height="519" src="/images/rundll32_w9vJQp0NqB.png" width="800"/></p>
 <p>proxy位置:140.130.17.3 連接阜:3128</p>
 <p><span><span></span></span></p><h1>配置可攜程式環境</h1>
@@ -49,8 +53,14 @@
 <p><span>啟用後GitHub Pages預設會伺服根目錄下的index.html</span></p>
 <p><span><strong>輸入<span style="color: #ff0000;">git config --edit --system</span>，即可進入下方圖面的頁面-將 credential 項目中的 <span style="color: #ff0000;">helper = manager 刪除</span>後儲存(wq)</strong></span></p>
 <p><span><strong><img alt="" height="405" src="/images/chrome_bHDxAyvHcu.png" width="384"/></strong></span></p>
-<p><span><strong>之後 git clone(cd進入倉儲資料夾之後，</strong></span><span><strong>輸入<span style="color: #ff0000;"> git clone <a href="mailto:git@github.com:%E5%B8%B3%E8%99%9F%E5%90%8D/" style="color: #ff0000;">git@github.com:帳號名/</a>倉儲名.git</span>，即可clone自己的倉儲，另外需老師倉儲內容，所以也必須將<span style="color: #ff0000;"><a href="https://github.com/chiamingyen/cmsimfly" style="color: #ff0000;">https://github.com/chiamingyen/cmsimfly</a>.git</span>  clone進來</strong></span></p>
-<p><b>隨後將老師倉儲的檔案複製到自己新的倉儲檔案裏面來不過<span style="color: #ff0000;">.git和README.me</span>檔案不用拉</b></p><h2>倉儲改版</h2>
+<p><span><strong>之後 git clone(cd進入倉儲資料夾之後，</strong></span><span><strong>輸入<span style="color: #ff0000;"> git clone <a href="mailto:git@github.com:%E5%B8%B3%E8%99%9F%E5%90%8D/" style="color: #ff0000;">git@github.com/50733115/</a>倉儲名.git</span>，即可clone自己的倉儲，另外需老師倉儲內容，所以也必須將<span style="color: #ff0000;"><a href="https://github.com/chiamingyen/cmsimfly" style="color: #ff0000;">https://github.com/chiamingyen/cmsimfly</a>.git</span>  clone進來</strong></span></p>
+<p><b>隨後將老師倉儲的檔案複製到自己新的倉儲檔案裏面來不過<span style="color: #ff0000;">.git和README.me</span>檔案不用拉</b></p>
+<p><span>git config --global user.name“50733115”</span></p>
+<p><span><span>git config --global user.eamil“50733115@gm.nfu.edu.tw”</span></span></p>
+<p><span><span>git config --global http.proxy<span> </span></span></span><a href="http://140.130.17.3:3128/"><span><span>http://140.130.17.3:3128</span></span></a></p>
+<p><span><span>git add .</span></span></p>
+<p><span><span>git commit -m""</span></span></p>
+<p><span><span>git push</span></span></p><h2>倉儲改版</h2>
 <p><span style="color: #000000; background-color: #ff0000;">指令解釋</span></p>
 <p><strong><span style="color: #ff0000;">git add</span><span> </span>:把已修改的檔案增加暫存區, 可以加單一檔案也可以使用 . 增加所有檔案.</strong></p>
 <p><strong><span style="color: #ff0000;">git commit -m</span><span> </span>"提交訊息"  用來將暫存區的檔案加到.git目錄下.</strong></p>
@@ -150,19 +160,30 @@
 <p><img alt="" height="336" src="/images/12.png" width="400"/></p>
 <p></p>
 <p><span>以<strong> ifconfig</strong> 查 Ubuntu 伺服器的 IP, 測試 nginx 伺服器是否可以連線</span></p>
+<p><span><img alt="" height="600" src="/images/VirtualBoxVM_Bvx3xt5Ch2.png" width="800"/></span></p>
 <p></p>
 <p><span>提醒:如果要關機要打指令<span>sudo halt</span></span></p>
 <p><strong>輸入 sudo apt install nginx 安裝 nginx WWW 伺服器</strong></p>
 <p></p>
-<p><span>以 Windows 10  下的 Filezilla client, 將編輯好的 nginx 設定檔案送到 Ubuntu再修改init.py，把檔案裡的False改True，再傳送覆蓋本地檔案</span></p>
 <p></p>
-<p></p><h1>ubuntu開啟網站</h1>
+<p>在檔案-站台管理員-新增站台-利用ifconfig查詢虛擬主機的ip位置後將ip新增到主機空格內，並且輸入虛擬主機使用者名稱及密碼，點選連線後即完成。</p>
+<p><span>以 Windows 10  下的 Filezilla client, 將編輯好的 nginx 設定檔案送到 Ubuntu再修改init.py，把檔案裡的False改True(先輸入cd /home/kmol2019/cms，再輸入vi init.py進到編輯頁面，按i進行編輯，把Flase改成true，按Esc退出編輯模式，輸入:wq 存檔</span></p>
+<p><img alt="" height="550" src="/images/filezilla_EqKWErMpcF.png" width="800"/></p>
+<p></p>
+<h1>filezilla</h1>
+<p><span>以<strong> ifconfig</strong> 查 Ubuntu 伺服器的 IP</span><span><img alt="" height="600" src="/images/VirtualBoxVM_Bvx3xt5Ch2.png" width="800"/></span></p>
+<p></p>
+<p><span></span></p>
+<p>在檔案-站台管理員-新增站台-利用ifconfig查詢虛擬主機的ip位置後將ip新增到主機空格內，並且輸入虛擬主機使用者名稱及密碼，點選連線後即完成。</p>
+<p><span>以 Windows 10  下的 Filezilla client, 將編輯好的 nginx 設定檔案送到 Ubuntu再修改init.py，把檔案裡的False改True(先輸入cd /home/kmol2019/cms，再輸入vi init.py進到編輯頁面，按i進行編輯，把Flase改成true，按Esc退出編輯模式，輸入:wq 存檔</span></p>
+<p><img alt="" height="550" src="/images/filezilla_EqKWErMpcF.png" width="800"/></p><h1>虛擬主機開啟網站</h1>
 <p><span>啟動，登入後輸入ifconfig查詢虛擬主機IP位址</span></p>
 <p><span><img alt="" height="430" src="/images/VirtualBoxVM_nlULbCcbyx.png" width="500"/></span></p>
 <p><span color="#FF0000">到瀏覽器輸入網址</span></p>
-<p><span color="#FF0000"><span style="color: #ff0000;">1.http</span>://"虛擬主機IP"，進到個人<span style="color: #ff0000;">靜態</span>網站</span></p>
+<p><strong><span color="#FF0000"><span style="color: #ff0000;">1.http</span>://"虛擬主機IP"，進到個人<span style="color: #ff0000;">靜態</span>網站</span></strong></p>
 <p><span color="#FF0000"><img alt="" height="268" src="/images/chrome_RBaKjlowd4.png" width="500"/></span></p>
-<p><span color="#FF0000"><span><span style="color: #ff0000;">2.https</span>://"虛擬主機IP"，進到個人<span style="color: #ff0000;">動態</span>網站</span></span></p>
+<p><span color="#FF0000"><span><span style="color: #ff0000;"></span></span></span></p>
+<p><strong><span color="#FF0000"><span style="color: #ff0000;">2.https</span>://"虛擬主機IP"，進到個人<span style="color: #ff0000;">動態</span>網站</span></strong></p>
 <p><span color="#FF0000"><span><img alt="" height="345" src="/images/chrome_Q3037Df1VW.png" width="500"/></span></span></p>
 <p><span color="#FF0000"><span><img alt="" height="397" src="/images/5SJ5eOI7wm.png" width="500"/></span></span></p><h1>第一個 圖片</h1>
 <p>學習如何一次上傳多個圖檔, 並且學會如何引用, 並且設定圖片大小.</p>
